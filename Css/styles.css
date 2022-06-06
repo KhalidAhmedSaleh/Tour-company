@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:400|Lato:400");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary colors */
+  --clr-primary-0: #7ea3cc;
+  --clr-primary-10: #7193b8;
+  --clr-primary-200: #6582a3;
+  --clr-primary-300: #58728f;
+  --clr-primary-400: #4c627a;
+  --clr-primary-500: #3f5266;
+  --clr-primary-600: #324152;
+  --clr-primary-700: #26313d;
+  --clr-primary-800: #0d1014;
+  --clr-primary-900: #192129;
+
+  /* Font color */
+  --clr-grey-0: #6e675f;
+  --clr-grey-100: #635d56;
+  --clr-grey-200: #58524c;
+  --clr-grey-300: #4d4843;
+  --clr-grey-400: #423e39;
+  --clr-grey-500: #373430;
+  --clr-grey-600: #2c2926;
+  --clr-grey-700: #211f1d;
+  --clr-grey-800: #161513;
+  --clr-grey-900: #0b0a09;
+
+  /* Background colors */
+  --clr-background-0: #edf2f4;
+  --clr-background-100: #d5dadc;
+  --clr-background-200: #bec2c3;
+  --clr-background-300: #a6a9ab;
+  --clr-background-400: #8e9192;
+  --clr-background-500: #77797a;
+  --clr-background-600: #5f6162;
+  --clr-background-700: #474949;
+  --clr-background-800: #2f3031;
+  --clr-background-900: #181818;
+
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+}
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: var(--clr-background-100);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.underline {
+  height: 0.3rem;
+  width: 150px;
+  background-color: var(--clr-primary-300);
+  margin: 0 auto;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  letter-spacing: var(--spacing);
+  font-size: 1.5rem;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+  border-radius: var(--radius);
+  color: var(--clr-grey-200);
+  background-color: var(--clr-white);
+  cursor: pointer;
+  border-color: transparent;
+}
+
+/* navbar */
+
+.nav-icon {
+  font-size: 2rem;
+  color: var(--clr-primary-400);
+  cursor: pointer;
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  z-index: 100;
+}
+
+.close-nav {
+  color: var(--clr-primary-300);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--clr-white);
+  height: 100%;
+  z-index: 150;
+  width: 20rem;
+  transition: var(--transition);
+  transform: translate(-100%, -100%);
+}
+
+.nav-header {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.nav-links {
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.link {
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+  color: var(--clr-primary-500);
+}
+
+.link:hover {
+  color: var(--clr-primary-10);
+}
+
+.showNav {
+  transform: translate(0, 0);
+  transition: var(--transition);
+}
+/* Interface */
+
+.interface {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background: linear-gradient(rgb(113, 147, 184, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../Images/Background.jpg") center/cover no-repeat;
+}
+
+.explore-btn:hover {
+  background-color: transparent;
+  border-color: var(--clr-white);
+  color: var(--clr-primary-0);
+}
+
+/* places */
+
+.places-text-container {
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--clr-grey-200);
+  margin-bottom: 1.5rem;
+  letter-spacing: var(--spacing);
+}
+
+.places-imgs-container {
+  width: 90vw;
+  max-width: 1170px;
+  display: grid;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.places-imgs {
+  width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: repeat(4, 200px);
+  grid-template-areas:
+    "a a b"
+    "a a b"
+    "c c c"
+    "c c c"
+    "f f g";
+}
+
+.australia {
+  grid-area: a;
+}
+
+.maldives {
+  grid-area: c;
+}
+
+.beach {
+  grid-area: f;
+}
+
+.beach img {
+  height: 100%;
+}
+
+.maldives img {
+  height: 100%;
+}
+
+.bambo-jungile {
+  grid-area: b;
+}
+
+.bambo-jungile img {
+  height: 100%;
+}
+
+.beach img {
+  height: 244px;
+}
+
+/* services */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
+}
+
+.cards-text-container h2 {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  color: var(--clr-grey-200);
+}
+
+.cards-text-container .underline {
+  width: 350px;
+}
+
+.img-container {
+  width: 500px;
+}
+
+.img-container img {
+  height: 390px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+
+.card-info {
+  text-align: center;
+  background-color: var(--clr-background-0);
+  width: 500px;
+  margin-top: 0;
+}
+
+.card-text {
+  color: var(--clr-primary-400);
+}
+
+.card {
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: hsl(210, 36%, 96%);
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.card:hover {
+  box-shadow: 0 19px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* footer */
+
+.footer {
+  background-color: var(--clr-black);
+  height: 15vh;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  color: var(--clr-primary-400);
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.icon:hover {
+  color: var(--clr-primary-200);
+}
+
+.icon-1 {
+  margin-right: 1rem;
+}
+
+.icon-2 {
+  margin-right: 1rem;
+}
+
+.icon-3 {
+  margin-right: 1rem;
+}
+
+.icon-4 {
+  margin-right: 1rem;
+}
+
+.footer-text {
+  color: var(--clr-white);
+  text-align: center;
+  margin-top: 1rem;
+}

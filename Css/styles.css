@@ -384,3 +384,68 @@ a {
   text-align: center;
   margin-top: 1rem;
 }
+
+/* Contact */
+
+.contact-form-container {
+  background-color: var(--clr-white);
+  height: 30vh;
+  width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+}
+
+.email,
+.name {
+  background-color: var(--clr-background-0);
+  border-color: transparent;
+  letter-spacing: var(--spacing);
+  text-transform: uppercase;
+  height: 1.5rem;
+  width: 20rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+}
+
+.email::placeholder,
+.name::placeholder {
+  font-size: 1rem;
+  color: var(--clr-grey-200);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.contact-form {
+  display: grid;
+  justify-content: center;
+}
+
+.form-title {
+  color: var(--clr-grey-700);
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: var(--clr-primary-0);
+  width: 30rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: var(--clr-white);
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--clr-primary-300);
+}
+
+.contact-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--clr-grey-200);
+  letter-spacing: var(--spacing);
+}
